@@ -1,7 +1,9 @@
 package ej2;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class GestionaAgenda {
@@ -21,17 +23,26 @@ public class GestionaAgenda {
             BufferedReader bufferedReader = new BufferedReader(fr);
 
             String linea;
-
+            String arrayNombreApellidosEmail[] = new String[3];
             while ((linea = bufferedReader.readLine()) != null) {
-                System.out.println(linea);
-                try {
-                    // Pausa el programa durante 3 segundos (3000 milisegundos)
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    // Maneja la excepción si se interrumpe la pausa
-                    e.printStackTrace();
+
+                if (linea.startsWith("FN:")) {
+                    arrayNombreApellidosEmail = linea.substring(3).split(" ");
+                    nombre=arrayNombreApellidosEmail[0];
+                    apellido1=arrayNombreApellidosEmail[1];
+                    apellido2=arrayNombreApellidosEmail[2];
                 }
+
+                if (linea.startsWith("EMAIL")) {
+                    email = linea.substring(30);
+                }
+                
+                if (linea.equals("")) {
+                    // añadir objeto al arraylist
+                }
+
             }
+
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
