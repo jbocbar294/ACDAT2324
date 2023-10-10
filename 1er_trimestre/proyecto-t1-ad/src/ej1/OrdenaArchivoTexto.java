@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class OrdenaArchivoTexto {
+
     public static void main(String[] args) throws FileNotFoundException {
 
         // fichero de entrada
@@ -29,6 +30,7 @@ public class OrdenaArchivoTexto {
 
     // método que ordena y borra las lineas en blanco
     public static void sort(File f, File f2) {
+
         ArrayList<String> lineas = new ArrayList<>();
 
         try {
@@ -43,8 +45,10 @@ public class OrdenaArchivoTexto {
                 }
             }
 
-            // método que ordena
+            // método de la clase Collections que ordena
             Collections.sort(lineas);
+
+            br.close();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -58,6 +62,7 @@ public class OrdenaArchivoTexto {
                 // después de cada linea inserta un salto de linea
                 bw.newLine();
             }
+            bw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -76,4 +76,16 @@ public class Contacto implements Serializable {
     public void setExtension(int extension) {
         this.extension = extension;
     }
+
+    @Override
+    public String toString() {
+        return "== CONTACTO ==\n" +
+                " Nombre =" + nombre + '\n' +
+                " Apellido 1 = " + apellido1 + '\n' +
+                " Apellido 2 = " + apellido2 + '\n' +
+                " Email = " + email + '\n' +
+                " Telhome = " + telhome + '\n' +
+                " Telmovil = " + telmovil + '\n' +
+                " Extension = " + extension + "\n\n";
+    }
 }
