@@ -8,11 +8,11 @@ public class agendaApp {
 
     String vcard="res" + File.separator + "contactos.vcard";
 
-    GestionaAgenda.obtenerLista(vcard);
+    System.out.println("\n======== LISTA DE CONTACTOS ========\n\n" + GestionaAgenda.obtenerLista(vcard).toString() + "\n\n\n");
 
-    System.out.println("\n======== LISTA DE CONTACTOS ========\n\n" + GestionaAgenda.obtenerLista(vcard).toString());
+    GestionaAgenda.generarFichero(vcard);
 
-    System.out.println("\n\n\n");
+    GestionaAgenda.toXML(new File(vcard));
 
     }
 }

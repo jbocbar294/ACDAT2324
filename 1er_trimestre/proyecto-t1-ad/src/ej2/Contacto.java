@@ -80,7 +80,7 @@ public class Contacto implements Serializable {
     @Override
     public String toString() {
         return "== CONTACTO ==\n" +
-                " Nombre =" + nombre + '\n' +
+                " Nombre = " + nombre + '\n' +
                 " Apellido 1 = " + apellido1 + '\n' +
                 " Apellido 2 = " + apellido2 + '\n' +
                 " Email = " + email + '\n' +
