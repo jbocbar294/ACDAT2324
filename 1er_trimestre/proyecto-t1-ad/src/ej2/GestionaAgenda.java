@@ -80,16 +80,8 @@ public class GestionaAgenda {
     // Ej 2-A.2
     public static boolean generarFichero(String fvcard) {
 
-        File f = new File("res" + File.separator + "contactos.dat");
-
-        // comprueba si el archivo no existe, si es así devuelve false
-        if (!f.exists()) {
-            System.out.println("El fichero destino no existe.");
-            return false;
-        }
-
         try {
-            // se usa para escribir datos binarios
+
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("res" + File.separator + "contactos.dat"));
 
             //recorre la lista de contactos y comprueba que tengan extension
@@ -110,23 +102,26 @@ public class GestionaAgenda {
         return true;
     }
 
-
+    // Ej 2-A.3
     public static File toXML(File fvcard) {
 
-        File fxml = new File("res" + File.separator + "contactos.dat");
-        List<Contacto> lista = new ArrayList<>();
+        File fxml = new File("res" + File.separator + "contactos.xml");
+        ArrayList<Contacto> lista = new ArrayList<>();
 
         try {
-
+            // con un BufferedReader leo las lineas del archivo
             BufferedReader br = new BufferedReader(new FileReader(fvcard));
-            BufferedWriter bw = new BufferedWriter(new FileWriter(fxml));
 
             String nombre = "", apellido1 = "", apellido2 = "", email = "";
             int telhome = 0, telmovil = 0, extension = 0;
 
             String linea;
 
+            // lee el archivo hasta que no quedan lineas
             while ((linea = br.readLine()) != null) {
+
+                // al igual que el método obtenerLista, compara el inicio de la línea, en caso de que coincida inserta
+                // el dato en la variable
                 if (linea.startsWith("FN:")) {
                     String[] arrayNombreApellidos = linea.substring(3).split(" ");
                     nombre = arrayNombreApellidos[0];
@@ -150,12 +145,67 @@ public class GestionaAgenda {
                     extension = Integer.parseInt(linea.substring(31));
                 }
 
+                // este if comprueba si el contacto de la vcard ha terminado, en ese caso, crea un objeto de la clase
+                // Contacto con las variables que se han creado antes y lo añade al arraylist que contiene los contactos
                 if (linea.equals("END:VCARD")) {
                     Contacto contacto = new Contacto(nombre, apellido1, apellido2, email, telhome, telmovil, extension);
                     lista.add(contacto);
                 }
 
-                //falta pasar la lista al fichero xml
+            }
+
+            Contacto aux;
+            // método burbuja para ordenar los contactos por el campo extension
+            // primer bucle for que ejecuta el segundo bucle tantas vecees como posiciones tenga el arraylist
+            for (int i=0;i<lista.size()-1;i++) {
+
+                // bucle que se ejecuta igual que el anterior
+                for (int j=0;j<lista.size()-1;j++) {
+
+                    // compara el campo extension de la posición j y j+1, en caso de que la extensión de la posición j
+                    // sea mayor que la extensión de la posición j+1, intercambia estos dos objetos de sitio
+                    if (lista.get(j).getExtension() > lista.get(j+1).getExtension()) {
+
+                        // Almacena el valor en 'j' en una variable temporal
+                        aux = lista.get(j);
+
+                        // almacena en la posición j el valor de j+1
+                        lista.set(j, lista.get(j+1));
+
+                        // almacena en la posición j+1 el valor de aux
+                        lista.set(j+1, aux);
+                    }
+
+                }
+
+            }
+
+            try {
+
+                FileWriter fw = new FileWriter(fxml);
+
+                // escribe en el fichero la cabecera del archivo xml
+                fw.write("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n\n");
+                fw.write("<contactos>\n\n");
+
+                // bucle que escribe en el fichero tantas veces como posiciones tenga el arraylist,
+                // escribe en el fichero una estructura xml y usando los getters escribe los campos del objeto que lee
+                for (int i=0;i<lista.size();i++) {
+                    fw.write("\t<contacto>\n\n");
+                    fw.write("\t\t<nombre>" + lista.get(i).getNombre() + "</nombre>\n");
+                    fw.write("\t\t<apellido1>" + lista.get(i).getApellido1() + "</apellido1>\n");
+                    fw.write("\t\t<apellido2>" + lista.get(i).getApellido2() + "</apellido2>\n");
+                    fw.write("\t\t<email>" + lista.get(i).getEmail() + "</email>\n");
+                    fw.write("\t\t<telhome>" + lista.get(i).getTelhome() + "</telhome>\n");
+                    fw.write("\t\t<telmovil>" + lista.get(i).getTelmovil() + "</telmovil>\n");
+                    fw.write("\t\t<extension>" + lista.get(i).getExtension() + "</extension>\n\n");
+                    fw.write("\t</contacto>\n\n");
+                }
+
+                fw.write("</contactos>");
+                fw.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
 
         } catch (FileNotFoundException e) {

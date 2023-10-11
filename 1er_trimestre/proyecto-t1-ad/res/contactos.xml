@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<contactos>
+
+	<contacto>
+
+		<nombre>ANA</nombre>
+		<apellido1>CABALLERO</apellido1>
+		<apellido2>SOSA</apellido2>
+		<email>ACABALLEROSOSA@MIEMPRESA.COM</email>
+		<telhome>952100100</telhome>
+		<telmovil>700100100</telmovil>
+		<extension>109</extension>
+
+	</contacto>
+
+	<contacto>
+
+		<nombre>JUAN</nombre>
+		<apellido1>PORTILLO</apellido1>
+		<apellido2>SORIA</apellido2>
+		<email>JPORTILLOSORIA@MIEMPRESA.COM</email>
+		<telhome>950101010</telhome>
+		<telmovil>600101010</telmovil>
+		<extension>709</extension>
+
+	</contacto>
+
+</contactos>
