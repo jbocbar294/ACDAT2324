@@ -1,17 +1,15 @@
-package vuelos;
-import libros.ManejadorSAX;
+package ej3;
+
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 
-public class GestionarSAX {
-
-    private ManejadorSAX handler;
+public class GestionarEmpleados {
+    private ManejadorSAXEmpleados handler;
 
     public void imprimirNodos() {
-
         System.out.println(handler.getXMLResult());
     }
 
@@ -25,7 +23,7 @@ public class GestionarSAX {
 
             // Se crea un instancia del manejador que será el que recorra el
             // documento XML secuencialmente
-            handler = new ManejadorSAX();
+            handler = new ManejadorSAXEmpleados();
 
             // Se da la salida al parser para que comience a manejar el
             // documento XML. Esto recorrerá secuencialmente el documento XML
@@ -45,16 +43,18 @@ public class GestionarSAX {
         }
     }
 
-
     public static void main(String args[]) {
+        System.out.println("");
+        GestionarEmpleados MyParser = new GestionarEmpleados();
 
-        vuelos.GestionarSAX MyParser = new vuelos.GestionarSAX();
+        ManejadorSAXEmpleados manejadorSAXEmpleados = new ManejadorSAXEmpleados();
 
-            // Si el documento se ha parseado correctamente
-            // Mostrar lo procesado por el parser
+        if (MyParser.abrir_XML_SAX(new File("res" + File.separator + "empleados.xml")) == 0) {
+            System.out.print("Documento xml parseado correctamente");
+
             MyParser.imprimirNodos();
+
+            manejadorSAXEmpleados.imprimirContador();
         }
-
     }
-
 }
