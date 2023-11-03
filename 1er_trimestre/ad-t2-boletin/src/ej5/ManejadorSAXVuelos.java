@@ -22,6 +22,7 @@ public class ManejadorSAXVuelos extends DefaultHandler {
         }
     }
 
+
     public ManejadorSAXVuelos() {
         xmlResult = "";
     }

@@ -1,4 +1,4 @@
-package ej5;
+package ej6;
 
 import org.xml.sax.SAXException;
 
@@ -6,8 +6,8 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 
-public class GestionarVuelos {
-    private ManejadorSAXVuelos handler;
+public class GestionarVideojuegos {
+    private ManejadorSAXVideojuegos handler;
 
     public void imprimirNodos() {
         System.out.println(handler.getXMLResult());
@@ -23,7 +23,7 @@ public class GestionarVuelos {
 
             // Se crea un instancia del manejador que será el que recorra el
             // documento XML secuencialmente
-            handler = new ManejadorSAXVuelos();
+            handler = new ManejadorSAXVideojuegos();
 
             // Se da la salida al parser para que comience a manejar el
             // documento XML. Esto recorrerá secuencialmente el documento XML
@@ -43,12 +43,14 @@ public class GestionarVuelos {
         }
     }
 
-    public static void main(String args[]) {System.out.println("");
-        GestionarVuelos MyParser = new GestionarVuelos();
+    public static void main(String args[]) {
+        // System.out.println("");
 
-        ManejadorSAXVuelos manejadorSAXVuelos = new ManejadorSAXVuelos();
+        GestionarVideojuegos MyParser = new GestionarVideojuegos();
 
-        if (MyParser.abrir_XML_SAX(new File("res" + File.separator + "vuelos.xml")) == 0) {
+        ManejadorSAXVideojuegos manejadorSAXVideojuegos = new ManejadorSAXVideojuegos();
+
+        if (MyParser.abrir_XML_SAX(new File("res" + File.separator + "catalogo.xml")) == 0) {
             // System.out.print("Documento xml parseado correctamente");
 
             MyParser.imprimirNodos();
