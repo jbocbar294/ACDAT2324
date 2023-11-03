@@ -7,6 +7,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class ManejadorSAXVideojuegos extends DefaultHandler {
 
@@ -16,6 +17,9 @@ public class ManejadorSAXVideojuegos extends DefaultHandler {
 
     boolean escribir = false;
     boolean escribirJuegomesa = false;
+    boolean escribirCaratula = false;
+
+    ArrayList<String> contenido = new ArrayList<String>();
 
     {
         try {
@@ -39,6 +43,18 @@ public class ManejadorSAXVideojuegos extends DefaultHandler {
     public void startDocument() throws SAXException {
         try {
             fw.write("<!DOCTYPE html>\n" +
+                    "<head>" +
+                    "<style>" +
+                    "table {" +
+                    "border-collapse: collapse;" +
+                    "margin: 0 auto;" +
+                    "}\n" +
+                    "td {" +
+                    "text-align: center;" +
+                    "vertical-align: middle;" +
+                    "}" +
+                    "</style>" +
+                    "</head>" +
                     "<body>\n" +
                     "   <h1>CATÁLOGO DE VIDEOJUEGOS CLÁSICOS</h1>\n" +
                     "       <table border=1>\n" +
@@ -64,26 +80,31 @@ public class ManejadorSAXVideojuegos extends DefaultHandler {
 
         try {
             if (elemento.equals("juegomesa")) {
+                escribir = true;
                 escribirJuegomesa = true;
             }
             if (elemento.equals("videojuego")) {
                 fw.write("<td>\n");
             }
             if (elemento.equals("caratula")) {
-                fw.write("<img src=\"");
+                fw.write("<img src=\"../");
                 escribir = true;
+                escribirCaratula = true;
             }
             if (elemento.equals("titulo")) {
-                fw.write("<p><b>");
+                contenido.add("<p><b>");
                 escribir = true;
             }
             if (elemento.equals("plataforma")) {
-                fw.write("<p>Consola: ");
+                contenido.add("<p>Consola: ");
                 escribir = true;
             }
-            if (elemento.equals("stock")) {
-                fw.write("<p>Stock actual: ");
+            if (elemento.equals("stock") && !escribirJuegomesa) {
+                contenido.add("<p>Stock actual: ");
                 escribir = true;
+            }
+            if (elemento.equals("captura")) {
+                escribirJuegomesa = true;
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -97,25 +118,34 @@ public class ManejadorSAXVideojuegos extends DefaultHandler {
         try {
             if (elemento.equals("juegomesa")) {
                 escribirJuegomesa = false;
+                escribir = true;
             }
             if (elemento.equals("videojuego")) {
+                for (String i : contenido) {
+                    fw.write(i);
+                }
                 fw.write("</td>\n");
+                contenido.clear();
             }
             if (elemento.equals("caratula")) {
                 fw.write("\">\n");
                 escribir = false;
+                escribirCaratula = false;
             }
             if (elemento.equals("titulo")) {
-                fw.write("</b></p>\n");
+                contenido.add("</b></p>\n");
                 escribir = false;
             }
             if (elemento.equals("plataforma")) {
-                fw.write("</p>\n");
+                contenido.add("</p>\n");
                 escribir = false;
             }
             if (elemento.equals("stock")) {
-                fw.write("</p>\n");
+                contenido.add("</p>\n");
                 escribir = false;
+            }
+            if (elemento.equals("captura")) {
+                escribirJuegomesa = false;
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -125,13 +155,21 @@ public class ManejadorSAXVideojuegos extends DefaultHandler {
 
     @Override
     public void characters(char[] cadena, int posinicio, int longitud) throws SAXException {
-        if (escribir == true && escribirJuegomesa == false) {
+
+        if (escribir == true && !escribirJuegomesa && !escribirCaratula) {
+
+            contenido.add(new String(cadena, posinicio, longitud));
+
+        } else if (!escribirJuegomesa) {
+
             try {
-                fw.write(new String(cadena, posinicio, longitud));
+                fw.write(cadena, posinicio, longitud);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
         }
+
     }
 
 
