@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(“¯¤úÿÿÿÿÿ
+I
+java:S2755D"3Disable access to external entities in XML parsing.(ž©›ï
+P
+java:S1118":Add a private constructor to hide the implicit public one.(Àñ§ó

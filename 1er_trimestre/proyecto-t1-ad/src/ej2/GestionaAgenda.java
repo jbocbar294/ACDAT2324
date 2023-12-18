@@ -18,7 +18,7 @@ public class GestionaAgenda {
                 // BufferedReader para leer el archivo contactos.vcard
                 FileReader fr = new FileReader(fvcard);
                 BufferedReader br = new BufferedReader(fr);
-
+n
                 // String en el que se almacenará cada linea del archivo
                 String linea;
 

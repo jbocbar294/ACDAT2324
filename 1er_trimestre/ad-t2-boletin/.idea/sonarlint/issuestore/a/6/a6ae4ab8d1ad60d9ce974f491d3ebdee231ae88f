@@ -1,0 +1,17 @@
+
+f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãîÂ„
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ò»‹¬şÿÿÿÿ
+U
+java:S2755"3Disable access to external entities in XML parsing.(ÂÿÕ‹ÿÿÿÿÿ8ŠàûÆÇ1
+E	java:S106"+Replace this use of System.out by a logger.(§ÚŸóúÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åéî
+Z
+java:S2147("DCombine this catch with the one at line 37, which has the same body.(”ı¾
+\
+java:S18541"FRemove this useless assignment to local variable "manejadorSAXVuelos".(û¹û»
+@
+java:S1197."*Move the array designators [] to the type.(Ü‡–À
+@	java:S106."+Replace this use of System.out by a logger.(Ü‡–À
+M
+java:S14811"7Remove this unused "manejadorSAXVuelos" local variable.(û¹û»
+V	java:S1254"<This block of commented-out lines of code should be removed.(±‘Õ¸ÿÿÿÿÿ

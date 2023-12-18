@@ -1,0 +1,15 @@
+
+k	java:S1171"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÈÕµÿÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Èô´Ïúÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(§ÚŸóúÿÿÿÿ
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åéî
+Z
+java:S2147("DCombine this catch with the one at line 37, which has the same body.(”ı¾
+f
+java:S18543"KRemove this useless assignment to local variable "manejadorSAXVideojuegos".(Š¤íıÿÿÿÿÿ
+E
+java:S1197."*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+V	java:S125/"<This block of commented-out lines of code should be removed.(óàÚåüÿÿÿÿ
+W
+java:S14813"<Remove this unused "manejadorSAXVideojuegos" local variable.(Š¤íıÿÿÿÿÿ
+V	java:S1256"<This block of commented-out lines of code should be removed.(±‘Õ¸ÿÿÿÿÿ

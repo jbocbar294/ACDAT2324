@@ -6,7 +6,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 
-public class GestionarVuelos {
+public class  GestionarVuelos {
     private ManejadorSAXVuelos handler;
 
     public void imprimirNodos() {

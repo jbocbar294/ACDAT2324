@@ -1,0 +1,10 @@
+
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù°Â®8½ÙòÆÇ1
+U
+java:S2755"3Disable access to external entities in XML parsing.(ÂÿÕ‹ÿÿÿÿÿ8ÈÙòÆÇ1
+L	java:S106"+Replace this use of System.out by a logger.(§ÚŸóúÿÿÿÿ8ËÙòÆÇ1
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Åéî8ÌÙòÆÇ1
+a
+java:S2147*"DCombine this catch with the one at line 39, which has the same body.(”ı¾8ÍÙòÆÇ1
+L
+java:S11971"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ8ÑÙòÆÇ1

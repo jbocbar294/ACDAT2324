@@ -1,9 +1,6 @@
 package ej1;
 
 import java.io.*;
-import java.nio.Buffer;
-import java.nio.BufferUnderflowException;
-import java.util.ArrayList;
 
 public class Ej1 {
 

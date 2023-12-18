@@ -1,0 +1,21 @@
+
+`	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğÕ·–ùÿÿÿÿ
+Z
+java:S21479"DCombine this catch with the one at line 55, which has the same body.(¬ÇÌõ
+@	java:S106"+Replace this use of System.out by a logger.(¾Øºš
+@	java:S106"+Replace this use of System.out by a logger.(ÓìË¬
+@	java:S106"+Replace this use of System.out by a logger.(µÀ³
+@	java:S106"+Replace this use of System.out by a logger.(ºëü‰
+@	java:S106"+Replace this use of System.out by a logger.(ÓìË¬
+@	java:S106"+Replace this use of System.out by a logger.(‰®ïâ
+@	java:S106#"+Replace this use of System.out by a logger.(÷ÎË¿
+@	java:S106%"+Replace this use of System.out by a logger.(ÓìË¬
+@	java:S106("+Replace this use of System.out by a logger.(‰®ïâ
+@	java:S106,"+Replace this use of System.out by a logger.(ó×„ô
+@	java:S106."+Replace this use of System.out by a logger.(ÓìË¬
+@	java:S106/"+Replace this use of System.out by a logger.(µÀ³
+@	java:S1062"+Replace this use of System.out by a logger.(Æí˜Ã
+@	java:S1064"+Replace this use of System.out by a logger.(ÓìË¬
+@	java:S1065"+Replace this use of System.out by a logger.(µÀ³
