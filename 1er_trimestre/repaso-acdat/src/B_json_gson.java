@@ -29,6 +29,6 @@ array
 
 ois
 
-       Libro libro = (clase) ois.readObject();ç
+       Libro libro = (clase) ois.readObject();
 
 while (ois.ready)

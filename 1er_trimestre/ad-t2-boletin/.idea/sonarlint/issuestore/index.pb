@@ -11,3 +11,7 @@ L
 src/ej7/ProcesadorXPath.java,2\d\2da59d65d8a4b7108bfd555078e61e95e59a912c
 D
 res/videojuegos.html,d\e\de7c0424e7c265f0ecd7442464981aaa3356bec2
+N
+src/ej4/GestionarUsuarios.java,c\c\cce7d75e9e0833b3156e2013434759cd3af29a69
+Q
+!src/ej4/ManejadorSAXUsuarios.java,6\4\64aaba0b9b59ca174f6b124b8306c5e428a2acf3
