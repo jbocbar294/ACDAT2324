@@ -20,6 +20,7 @@ public class LeerObjetoSerializable {
                     }
                 }
 
+
                 for (Usuario usuario : lista) {
                     System.out.println("Objeto: " + usuario.toString());
                 }
