@@ -1,0 +1,36 @@
+
+g	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¶à®ÚÜ1
+g	java:S112a"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¶à®ÚÜ1
+‚
+java:S1192"eDefine a constant instead of duplicating this literal "====================================" 9 times.(—äÒ8·à®ÚÜ1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Çµí‘8¹»ÊÚÜ1
+a
+java:S2147`"DCombine this catch with the one at line 94, which has the same body.(¬ÇÌõ8Ãà®ÚÜ1
+L	java:S106"+Replace this use of System.out by a logger.(ù–¨Ùùÿÿÿÿ8Äà®ÚÜ1
+G	java:S106"+Replace this use of System.out by a logger.(—äÒ8Äà®ÚÜ1
+L	java:S106"+Replace this use of System.out by a logger.(éÈ½üÿÿÿÿ8Åà®ÚÜ1
+G	java:S106"+Replace this use of System.out by a logger.(—äÒ8Åà®ÚÜ1
+G	java:S106""+Replace this use of System.out by a logger.(è·ÌŒ8Åà®ÚÜ1
+G	java:S106$"+Replace this use of System.out by a logger.(óë¾Ù8Æà®ÚÜ1
+G	java:S106&"+Replace this use of System.out by a logger.(—äÒ8Æà®ÚÜ1
+L	java:S106+"+Replace this use of System.out by a logger.(¯‹™Øşÿÿÿÿ8Æà®ÚÜ1
+L	java:S106-"+Replace this use of System.out by a logger.(×…ÚÖıÿÿÿÿ8Å¡µÚÜ1
+G	java:S106/"+Replace this use of System.out by a logger.(—äÒ8Å¡µÚÜ1
+L	java:S1064"+Replace this use of System.out by a logger.(§âŒ´ÿÿÿÿÿ8ñ½»ÚÜ1
+L	java:S1066"+Replace this use of System.out by a logger.(×…ÚÖıÿÿÿÿ8ò½»ÚÜ1
+G	java:S1068"+Replace this use of System.out by a logger.(—äÒ8µ§¿ÚÜ1
+F	java:S106="+Replace this use of System.out by a logger.(ã—8¶§¿ÚÜ1
+G	java:S106?"+Replace this use of System.out by a logger.(³šß8¶§¿ÚÜ1
+G	java:S106A"+Replace this use of System.out by a logger.(—äÒ8Ñ¹ÃÚÜ1
+L	java:S106F"+Replace this use of System.out by a logger.(à¶ó”üÿÿÿÿ8Ñ¹ÃÚÜ1
+G	java:S106H"+Replace this use of System.out by a logger.(óë¾Ù8Ñ¹ÃÚÜ1
+G	java:S106J"+Replace this use of System.out by a logger.(—äÒ8Â»ÊÚÜ1
+G	java:S106O"+Replace this use of System.out by a logger.(˜ØØÅ8³ùÒÚÜ1
+G	java:S106Q"+Replace this use of System.out by a logger.(óë¾Ù8Ó”ÛÚÜ1
+G	java:S106S"+Replace this use of System.out by a logger.(—äÒ8Ô”ÛÚÜ1
+G	java:S106X"+Replace this use of System.out by a logger.(œ½Ñ8’ÿşÚÜ1
+G	java:S106Z"+Replace this use of System.out by a logger.(óë¾Ù8“ÿşÚÜ1
+G	java:S106\"+Replace this use of System.out by a logger.(—äÒ8“ÿşÚÜ1
+M
+java:S1128	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ªÂÛÜ1

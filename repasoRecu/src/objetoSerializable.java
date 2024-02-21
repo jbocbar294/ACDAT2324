@@ -21,6 +21,7 @@ public class objetoSerializable {
                 lista.add(objeto5);
 
                 ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(f));
+                oos.writeInt(lista.size());
 
                 for (Usuario objeto : lista) {
                     oos.writeObject(objeto);

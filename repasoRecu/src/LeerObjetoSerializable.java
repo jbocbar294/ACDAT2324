@@ -10,16 +10,18 @@ public class LeerObjetoSerializable {
             try {
                 ObjectInputStream ois = new ObjectInputStream(new FileInputStream(f));
 
+                int numeroClientes = ois.readInt();
+
                 ArrayList<Usuario> lista = new ArrayList<>();
-                while (true) {
+
+                for (int i = 0; i < numeroClientes; i++) {
                     try {
                         Usuario usuario = (Usuario) ois.readObject();
                         lista.add(usuario);
                     } catch (EOFException eofException) {
-                        break;
+                        System.err.println(eofException.getMessage());
                     }
                 }
-
 
                 for (Usuario usuario : lista) {
                     System.out.println("Objeto: " + usuario.toString());

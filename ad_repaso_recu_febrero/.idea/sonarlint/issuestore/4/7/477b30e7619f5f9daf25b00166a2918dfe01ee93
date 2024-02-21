@@ -1,0 +1,22 @@
+
+—
+java:S1192&"|Define a constant instead of duplicating this literal "-----------------------------------------------------------" 5 times.(¤¨œ úÿÿÿÿ
+n
+java:S1450"XRemove the "objetData" field and declare it as a local variable in the relevant methods.(£®Ïƒ
+Q	java:S125"<This block of commented-out lines of code should be removed.(“¾É°
+E	java:S106%"+Replace this use of System.out by a logger.(ÌÑ§£üÿÿÿÿ
+E	java:S106&"+Replace this use of System.out by a logger.(¤¨œ úÿÿÿÿ
+E	java:S106'"+Replace this use of System.out by a logger.(¤ªçâþÿÿÿÿ
+E	java:S106("+Replace this use of System.out by a logger.(¤¨œ úÿÿÿÿ
+@	java:S106)"+Replace this use of System.out by a logger.(‰î†ï
+E	java:S1061"+Replace this use of System.out by a logger.(¤¨œ úÿÿÿÿ
+@	java:S1062"+Replace this use of System.out by a logger.( ‹ªÉ
+E	java:S1068"+Replace this use of System.out by a logger.(¤¨œ úÿÿÿÿ
+E	java:S1069"+Replace this use of System.out by a logger.(Òæú‘ùÿÿÿÿ
+E	java:S106;"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ
+E	java:S106?"+Replace this use of System.out by a logger.(¤¨œ úÿÿÿÿ
+E	java:S106@"+Replace this use of System.out by a logger.(ô«ÿàøÿÿÿÿ
+E	java:S106B"+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ
+E	java:S106H"+Replace this use of System.out by a logger.(å€—£ýÿÿÿÿ
+H
+java:S1144""3Remove this unused private "toJsonExamples" method.(„¯‚K
